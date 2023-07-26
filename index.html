@@ -1,40 +1,411 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="reset.css">
-		<link rel="stylesheet" href="reveal.css">
-		<link rel="stylesheet" href="theme/black.css">
+	<title>Accessability</title>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="reveal.css">
+	<link rel="stylesheet" href="theme/black.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+
+			<section>
+				<section>
+					<img width="300" src="./images/web-accessibility-icon-11.png" alt="web accessibility logo">
+					<h1>
+						Web Accessibility
+					</h1>
+				</section>
+				<section>
+					<h2>Why?</h2>
+				</section>
+				<section>
+					<img width="300" src="./images/kids-with-disabilitys.jpg" alt="kids with disabilities">
+					<h2>Reasons:</h2>
+					<ul>
+						<small>
+							<li>enabling access to content for people with disabilities</li>
+							<li>add new clients to your business</li>
+							<li>follow laws</li>
+						</small>
+					</ul>
+				</section>
+				<section>
+					<img width='500' src="./images/w3c-wai-logo.jpg" alt="w3c wai logo">
+					<h2>WAI</h2>
+					<p>WAI is a W3C Web Accessibility Initiative</p>
+				</section>
+				<section>
+					<img width='400' src="./images/essential-components-of-web-accessibility-according-to-W3C.png"
+						alt="w3c guidelines scheme">
+					<h2>WAI</h2>
+					<p>WAI provides a set of standards for web accessibility:</p>
+					<ul>
+						<small>
+							<li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Web Content Accessibility Guidelines
+									(WCAG)</a></li>
+							<li><a href="https://www.w3.org/WAI/standards-guidelines/uaag/">User Agent Accessibility Guidelines
+									(UAAG)</a></li>
+							<li><a href="https://www.w3.org/WAI/standards-guidelines/atag/">Authoring Tool Accessibility Guidelines
+									(ATAG)</a></li>
+						</small>
+					</ul>
+				</section>
+				<section>
+					<h3>UAAG</h3>
+					<p><small>User agents include browsers, browser extensions, media players, readers, and other applications
+							that
+							render web content.</small></p>
+					<h3>ATAG</h3>
+					<p><small>Authoring tools are software and services that “authors” (web developers, designers, writers,
+							etc.) use
+							to produce web content. For example: HTML editors, content management systems (CMS), and websites that
+							let users add content, such as blogs and social networking sites.</small></p>
+					<h3>WCAG</h3>
+					<p><small>Web “content” generally refers to the information in a web page or web application</small></p>
+				</section>
+				<section>
+					<h2>WAI guidelines grouped for four principles:</h2>
+					<ol>
+						<small>
+							<li><strong>Perceivable</strong> - information must be perceivable for users in ways that it can perceive
+							</li>
+							<li><strong>Operable</strong> - interfaces must be operatable (navigation, inputs, buttons)</li>
+							<li><strong>Understandable</strong> - content information and interact actions must be understhandable</li>
+							<li><strong>Robust</strong> - content must be robust for assistive technologies (screen readers …)</li>
+						</small>
+					</ol>
+				</section>
+			</section>
+
+
+			<section>
+				<section>
+					<img width="700" src="./images/wcag.png" alt="wcag four principles">
+				</section>
+				<section>
+					<p class="text-align-left">WCAG is a Web Content Accessability Guidelines.</p>
+					<p class="text-align-left">WCAG is a documentation that describe how to make web applications suitable and
+						accessible for people with disabilities.</p>
+					<p class="text-align-left">WCAG2.1 include 12 guidelines.</p>
+				</section>
+				<section>
+					<h2>WCAG quick reference</h2>
+					<img width="700" src="./images/wcag-quic-reference.png" alt="wcag quick reference overview">
+				</section>
+				<section>
+					<h2>WCAG2.1 successful criteria:
+					</h2>
+					<ul>
+						<small>
+							<li>“A” has 25 success criteria</li>
+							<li>“AA” has 45 success criteria (include previous)</li>
+							<li>“AAA” has 78 success criteria (include previous)</li>
+						</small>
+					</ul>
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<img class="full-width" src="./images/accessibility-banner.png" alt="accessibility banner">
+					<h2>10 WCAG2.1 tips for developers</h2>
+				</section>
+				<section>
+					<h3>Tip 1</h3>
+					<p>Associate each input (formControl) with label</p>
+					<pre><code data-trim>
+						<label for="username">Username</label>
+						<input id="username" type="text" name="username">
+					</code></pre>
+				</section>
+				<section>
+					<h3>Tip 2</h3>
+					<p>Include alternative text for images</p>
+					<pre><code data-trim>
+						<img src="./images/wcag.png" alt="wcag four principles">
+					</code></pre>
+				</section>
+				<section>
+					<h3>Tip 3</h3>
+					<p>Identify language and language changes for each page</p>
+					<pre><code data-trim>
+						html lang="en"
+					</code></pre>
+				</section>
+				<section>
+					<h3>Tip 4</h3>
+					<p>Use markUp to convey structure and information</p>
+					<p>Use WIA ARIA roles to identify functionality (role=”search”) and if possible HTML5
+						semantic tags</p>
+					<pre><code data-trim>
+						<form action="#" method="post">
+							<div role="search">
+								<label for="search">Search for</label>
+								<input type="search" id="search" aria-describedby="search-help">
+								<div id="search-help">Search records by customer id or name</div>
+								<button type="submit">Go</button>
+							</div>
+						</form>
+					</code></pre>
+				</section>
+				<section>
+					<h3>Tip 5</h3>
+					<p>Provide user clear description and error information to avoid mistakes (error
+						messages, examples)</p>
+					<pre><code data-trim>
+						<label for="phone">Phone</label>
+						<input id="phone" name="phone" type="tel"
+       				pattern="^(\(?0[1-9]{1}\)?)?[0-9 -]*$"
+       				aria-describedby="phone-desc">
+						<p id="phone-desc">For example, (02) 1234 1234</p>
+					</code></pre>
+				</section>
+				<section>
+					<h3>Tip 6</h3>
+					<p>Reflect the reading order in the code order</p>
+					<img width="500" src="./images/10_tips_for_developers/developers-6tip.png"
+						alt="tip six: reflect reading order example">
+				</section>
+				<section>
+					<h3>Tip 7</h3>
+					<p>Write code to adapt content for user technology (Responsive, and different
+						viewport's)</p>
+					<pre><code data-trim>
+						/* On narrow viewports, 
+						make the navigation full width */
+						@media screen and (min-width: 25em) {
+							#nav {
+								float: none;
+								width: auto;
+							}
+							#main {
+								margin-left: 0;
+							}
+						}
+					</code></pre>
+				</section>
+				<section>
+					<h3>Tip 8</h3>
+					<p>Provide meaning for non-standart interactive elements</p>
+					<pre><code data-trim>
+						<nav aria-label="Main Navigation" role="navigation">
+							<ul>
+								<li><a href="...">Home</a></li>
+								<li><a href="...">Shop</a></li>
+								<li class="has-submenu">
+									<a aria-expanded="false" aria-haspopup="true" href="...">SpaceBears</a>
+									<ul>
+											<li><a href="...">SpaceBear 6</a></li>
+											<li><a href="...">SpaceBear 6 Plus</a></li>
+									</ul>
+								</li>
+								<li><a href="...">MarsCars</a></li>
+								<li><a href="...">Contact</a></li>
+							</ul>
+						</nav>
+					</code></pre>
+				</section>
+				<section>
+					<h3>Tip 9</h3>
+					<p>Provide keyboard accusable for all alternative interactive elements</p>
+					<p class="text-align-left">
+						<small>
+							Think about keyboard access, especially when developing interactive elements, such
+							as menus, mouseover information, collapsable accordions, or media players. Use tabindex="0" to add an
+							element that does not normally receive focus, such as
+							or, into the navigation order when it is being used for interaction. Use scripting to capture and
+							respond to keyboard events.
+						</small>
+					</p>
+				</section>
+				<section>
+					<h3>Tip 10</h3>
+					<p>Avoid CAPTCH where possible</p>
+					<p class="text-align-left">If it not possible to avoid capture you should make CAPTHCHA understandable and clear</p>
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<h2>WIA-ARIA</h2>
+					<img width="500" src="./images/wai-aria-piramide.webp" alt="wia aria pyramid">
+				</section>
+				<section>
+					<p class="text-align-left">WIA-ARIA is Web Interface Accessibility - Accessible Rich Internet Application </p>
+					<p class="text-align-left">WIA-ARIA provide developers a set of new HTML attributes wich add additional
+						schematic and make elements
+						more accessible.</p>
+				</section>
+				<section>
+					<h2>Main type of attributes in WIA-ARIA:</h2>
+					<ul>
+						<small>
+							<li>Roles - define special attribute role to identify role, group, structure of element (button, article,
+								tab, menu…)</li>
+							<li>Properties - define attributes to manage elements (aria-required, aria-describedby, aria-controls…)</li>
+							<li>State - define attributes to show element condition (aria-disabled, aria-checked, aria-hidden…)</li>
+						</small>
+					</ul>
+				</section>
+				<section>
+					<h3>Define a custom button</h3>
+					<pre><code data-trim>
+						<div tabindex="0" role="button">
+							Click me!
+						</div>
+					</code></pre>
+					<h3>Define input with aria-label</h3>
+					<pre><code data-trim>
+						<input
+  						type="search"
+ 							name="search"
+  						placeholder="Search query"
+  						aria-label="Search through site content" />
+					</code></pre>
+					<h3>Add alert role for error</h3>
+					<pre><code data-trim>
+						<div class="errors" role="alert" aria-relevant="all">
+							<ul></ul>
+						</div>
+					</code></pre>
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<h2>Accessibility tree and devtools</h2>
+					<img width="700" src="./images/accessibility-tree.png" alt="transform process from DOM to accessibility tree">
+				</section>
+				<section>
+					<p class="text-align-left">Accessibility tree is a tree that browser make from DOM tree and provide
+						information about elements for
+						assistive tools (screen readers and e.c.t). </p>
+				</section>
+				<section>
+					<h2>Semantic</h2>
+					<p class="text-align-left">To make accessibility tree browsers take info from tags elements and nodes. To
+						describe roles and provide
+						browser information about schematic and content of your application your should use semantic/landmarks tags
+						like main, nav, section, article, button, side…</p>
+					<pre><code data-trim>
+							<header><nav><ul><li><a href="#">Main</a></li></ul></nav></header>
+							<main>
+								<article>
+									<h1>Hello world</h1>
+									<button>Click me!</button>
+								</article>
+							</main>
+							<footer></footer>
+						</code></pre>
+				</section>
+				<section>
+					<h2>Chrome devtools - Accessibility tree</h2>
+					<img width="600" src="./images/accessibility/chrome-devtools.png" alt="chrome devtools accessibility tree">
+				</section>
+				<section>
+					<h2>Chrome devtools - LightHouse</h2>
+					<img width="600" src="./images/accessibility/lighthouse.png" alt="chrome devtools lighthouse tab">
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<h2>Web accessibility laws in EU and USA</h2>
+				</section>
+				<section>
+					<article>
+						<h3>EU</h3>
+						<p>
+							<small class="text-align-left">
+								The European Union follows the European Accessibility
+								Act (EAA). Similar to the Americans with Disabilities
+								Act (ADA) in the
+								United States, the EAA requires all members of the E.U. to provide accessible products and services,
+								including e-commerce, banking services, smartphones, ticketing and check-in, and more.
+								The Web Accessibility Directive and
+								EAA are based on WCAG standards, though they differ significantly.
+								<br>
+								<h3>Conclusion:</h3>
+								All government web application should have WCAG2.1 with AA success tests criteria,
+								other
+								institution and private organization WCAG2.1 with A success rate.
+							</small>
+						</p>
+					</article>
+				</section>
+				<section>
+					<article>
+						<h3>USA</h3>
+						<p>
+							<small class="text-align-left">
+								The USA follows the ADA American Accessible Design standard - say what is required for a
+								building or facility to be physically accessible to people with disabilities.
+								<br>
+								<br>
+								<h3>Conclusion:</h3>
+								All government web application should have WCAG2.0 with AA success tests criteria, other
+								institution and private organization WCAG2.0 with A success rate.
+							</small>
+						</p>
+					</article>
+				</section>
+			</section>
+
+			<section>
+				<h2>Useful links</h2>
+				<ul>
+					<li>
+						<a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility">Accessibility guide</a>
+					</li>
+					<li>
+						<a href="https://www.w3.org/WAI/">WAI official site</a>
+					</li>
+					<li>
+						<a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/WAI-ARIA_basics">WIA-ARIA basics</a>
+					</li>
+					<li>
+						<a href="https://www.youtube.com/watch?v=36SkjSZhNY0&t=1426s">Accessibility Yandex lection</a>
+					</li>
+					<li>
+						<a href="https://ec.europa.eu/social/main.jsp?catId=1202">European Accessibility Act</a>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>The End</h2>
+			</section>
+
 		</div>
+	</div>
 
-		<script src="build/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+	<script src="build/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
 </html>
